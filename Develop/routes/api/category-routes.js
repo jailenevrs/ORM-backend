@@ -46,10 +46,10 @@ router.put('/:id', async(req, res) => {
       },
   });
   if (!categoryData[0]){
-    res.status(404).json({ message: 'No user with this id!' });
+    res.status(404).json({ message: 'No category associated with this id!' });
     return;
   }
-  res.status(200).json(userData);
+  res.status(200).json(categoryData);
 } catch (err) {
   res.status(500).json(err);
 }
